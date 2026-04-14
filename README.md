@@ -1,80 +1,161 @@
 # 🌦️ Weather CLI App
 
-A production-ready Python package that fetches real-time weather data using the OpenWeatherMap API.
+<p align="center">
+  <b>A production-ready Python CLI for real-time weather data</b><br>
+  Clean architecture • PyPI package • CLI tool
+</p>
 
-## 🚀 Install
+<p align="center">
+  <img src="https://img.shields.io/pypi/v/weather-app-vkyei?color=blue&label=PyPI">
+  <img src="https://img.shields.io/pypi/pyversions/weather-app-vkyei">
+  <img src="https://img.shields.io/github/stars/AIMinister/weather-app?style=social">
+  <img src="https://img.shields.io/badge/status-production--ready-success">
+</p>
 
+---
+
+## 🚀 Installation
+
+```bash
 pip install weather-app-vkyei
+```
+
+---
 
 ## ⚡ Usage
 
+```bash
 weather
+```
 
-## 📦 PyPI
+---
 
-https://pypi.org/project/weather-app-vkyei/
+## 🎬 Example Output
+
+```
+📍 Dallas
+🌡️ Temp: 24.39°C
+☁️ broken clouds
+```
+
+---
+
+## 🔑 Environment Setup
+
+Create a `.env` file:
+
+```env
+OPENWEATHER_API_KEY=your_api_key_here
+```
+
+Get your API key here: https://openweathermap.org/api
+
+---
 
 ## 🧠 Features
 
-- CLI-based weather lookup
-- Environment variable support (.env)
-- Modular API client design
-- Packaged and published to PyPI
+- 🌍 Real-time weather lookup
+- 💻 Command-line interface (CLI)
+- 🔐 Secure API key handling via `.env`
+- 🧩 Modular architecture (client + CLI separation)
+- 📦 Packaged with `pyproject.toml`
+- 🚀 Published to PyPI
 
+---
 
-## 📘 Homework: Build & Publish a Python Weather App
+## 📦 Project Structure
 
-### 🎯 Objective
- In this assignment, you will take a simple Python weather application and turn it into a real-world, installable Python package that others can use.
-
-By the end, you will:
- - Work with virtual environments using UV
-- Use environment variables securely
-- Package Python projects (.whl)
-- Publish to PyPI
-- Share your project with others
-
-### 🧩 Starter Code
- - `main.py`
-  
-## 📝 Tasks
--  ✅ 1. Create a Virtual Environment (Using UV) and Activate it.
--  🔑 2. Get API Key & Use .env
--  🏗️ 3. Structure Your Project Properly
--  📦 4. Build Your Package (.whl)
--  🚀 5. Publish to PyPI
--  🌍 6. Install Your Package
-   -  `pip install your-project-name`
-   -  `from weather_app import OpenWeatherMap`
-- 🧑‍💻 7. Push to GitHub
-- 👥 8. Share With Others
-
-
-## 🏗️ Structure Your Project Properly
 ```
 weather-app/
 │
 ├── src/
-│   └── weather_app/
+│   └── weather_app_vkyei/
 │       ├── __init__.py
-│       └── client.py
+│       ├── client.py        # API logic
+│       └── cli.py           # CLI entry point
 │
 ├── .env
-|-- main.py
+├── main.py
 ├── pyproject.toml
 ├── README.md
 └── .gitignore
 ```
 
-## 🧠 Grading Criteria
+---
 
-| Criteria                  | Points  |
-| ------------------------- | ------- |
-| Virtual environment setup | 10      |
-| API key + `.env` usage    | 15      |
-| Project structure         | 15      |
-| Package build (`.whl`)    | 20      |
-| PyPI deployment           | 20      |
-| GitHub repo               | 10      |
-| Sharing/testing           | 10      |
-| **Total**                 | **100** |
+## 🛠️ Tech Stack
+
+- Python 3.14+
+- requests
+- python-dotenv
+- uv (build + dependency management)
+
+---
+
+## 📦 PyPI Package
+
+https://pypi.org/project/weather-app-vkyei/
+
+---
+
+## 🧪 Local Development
+
+```bash
+git clone https://github.com/AIMinister/weather-app.git
+cd weather-app
+
+uv venv
+uv pip install -e .
+
+python main.py
+```
+
+---
+
+## 🚀 Build & Publish
+
+```bash
+uv build
+uv run twine upload dist/*
+```
+
+---
+
+## 🧩 Architecture
+
+- `client.py` → Handles API communication  
+- `cli.py` → User interaction (command line)  
+- `.env` → Secure API key storage  
+- `pyproject.toml` → Packaging & distribution  
+
+---
+
+## 🔮 Future Improvements
+
+- Add forecast support (5-day / hourly)
+- Add argument-based CLI (`weather Dallas`)
+- Add caching for faster responses
+- Build web UI (FastAPI + frontend)
+
+---
+
+## 👤 Author
+
+**AIMinister**  
+https://github.com/AIMinister
+
+---
+
+## ⭐ Support
+
+If you found this useful:
+
+⭐ Star the repo  
+🍴 Fork it  
+🚀 Build on top of it  
+
+---
+
+<p align="center">
+  Built like a real-world Python package 📦
+</p>
