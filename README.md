@@ -1,3 +1,27 @@
+# 🌦️ Weather CLI App
+
+A production-ready Python package that fetches real-time weather data using the OpenWeatherMap API.
+
+## 🚀 Install
+
+pip install weather-app-vkyei
+
+## ⚡ Usage
+
+weather
+
+## 📦 PyPI
+
+https://pypi.org/project/weather-app-vkyei/
+
+## 🧠 Features
+
+- CLI-based weather lookup
+- Environment variable support (.env)
+- Modular API client design
+- Packaged and published to PyPI
+
+
 ## 📘 Homework: Build & Publish a Python Weather App
 
 ### 🎯 Objective
